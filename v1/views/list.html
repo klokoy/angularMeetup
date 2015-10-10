@@ -1,0 +1,34 @@
+<div>
+
+    <h2>
+        The data:
+    </h2>
+
+    <table class="striped">
+        <thead>
+            <tr>
+                <th data-field="avatar"></th>
+                <th data-field="star"></th>
+                <th data-field="firstName">First name</th>
+                <th data-field="lastName">Last name</th>
+                <th data-field="jobTitle">Job title</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr ng-repeat="person in list" ui-sref="item({id: person.id})">
+                <td><img alt="" class="circle" height="36" src="{{person.avatar}}" width="36"></td>
+                <td>
+                    <span ng-controller="StarCtrl">
+                        <i class="material-icons" ng-click="star(person.id);$event.stopPropagation();" ng-if="!isStared(person.id)">star_border</i>
+                        <i class="material-icons" ng-click="unstar(person.id);$event.stopPropagation();" ng-if="isStared(person.id)">star</i>
+                    </span>
+                </td>
+                <td>{{person.firstName}}</td>
+                <td>{{person.lastName}}</td>
+                <td>{{person.jobTitle}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>

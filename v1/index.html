@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+<head>
+    <meta charset="utf-8">
+    <title>Migration demo</title>
+
+    <link rel="stylesheet" href="./node_modules/materialize-css/dist/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script src="./node_modules/angular/angular.js"></script>
+    <script src="./node_modules/angular-ui-router/build/angular-ui-router.js"></script>
+
+    <script src="./src/app.js"></script>
+    <script src="./src/listCtrl.js"></script>
+    <script src="./src/personCtrl.js"></script>
+    <script src="./src/person.js"></script>
+    <script src="./src/star.js"></script>
+    <script src="./src/starCtrl.js"></script>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+
+            <h1 class="center-align" ui-sref="list">
+                1 to 2
+            </h1>
+
+            <div ui-view></div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
