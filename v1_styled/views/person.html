@@ -1,0 +1,35 @@
+<div class="row">
+
+    <div class="center-align">
+        <img alt="" class="circle center-align" height="200" src="{{person.data.avatar}}" width="200">
+    </div>
+
+    <form class="col s12">
+        <div class="row">
+            <div class="input-field col s6">
+                <label class="active" for="first_name">First Name</label>
+                <input id="first_name" ng-model="person.data.firstName" placeholder="Placeholder" type="text">
+            </div>
+            <div class="input-field col s6">
+                <label class="active" for="last_name">Last Name</label>
+                <input id="last_name" ng-model="person.data.lastName" type="text">
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <label class="active" for="jobTitle">Job title</label>
+                <input id="jobTitle" ng-model="person.data.jobTitle" type="text">
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <label class="active" for="jobDescription">Job description</label>
+                <input id="jobDescription" ng-model="person.data.jobDescription" type="text">
+            </div>
+        </div>
+
+        <button class="btn waves-effect waves-light" name="action" ng-click="submit()" type="submit">Submit</button>
+
+    </form>
+
+</div>

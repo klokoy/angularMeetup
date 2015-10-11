@@ -18,6 +18,11 @@ http-server
 #v1_styled
 angular 1 version. transformed to follow angular style guide + directives and thin controllers
 
+changes to comply with angular style guide
+- controller_as syntax
+
+
+
 ```bash
 #in v1_styled directory
 http-server
