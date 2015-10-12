@@ -11,7 +11,7 @@ function PersonCtrl($stateParams, Person) {
             vm.data = thePerson;
         });
 
-    self.submit = function() {
+    vm.submit = function() {
         console.log(vm.data);
     }
 };

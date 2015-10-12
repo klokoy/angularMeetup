@@ -4,6 +4,7 @@
   "description": "angular 1 version of demo app",
   "main": "index.js",
   "scripts": {
+    "start": "./node_modules/http-server/bin/http-server .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Kim Lokøy",
@@ -11,6 +12,7 @@
   "dependencies": {
     "angular": "^1.5.0-beta.0",
     "angular-ui-router": "^0.2.15",
+    "http-server": "^0.8.5",
     "materialize-css": "^0.97.1"
   }
 }
