@@ -1,0 +1,18 @@
+{
+  "version": "v4",
+  "repo": "borisyankov/DefinitelyTyped",
+  "ref": "master",
+  "path": "typings",
+  "bundle": "typings/tsd.d.ts",
+  "installed": {
+    "angular2/router.d.ts": {
+      "commit": "571bf28dd6c3266e131e412c894378b8c4af5064"
+    },
+    "es6-shim/es6-shim.d.ts": {
+      "commit": "571bf28dd6c3266e131e412c894378b8c4af5064"
+    },
+    "angular2/angular2.d.ts": {
+      "commit": "571bf28dd6c3266e131e412c894378b8c4af5064"
+    }
+  }
+}
