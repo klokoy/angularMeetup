@@ -1,6 +1,6 @@
 import {Component, View, FORM_DIRECTIVES, CORE_DIRECTIVES} from 'angular2/angular2';
 
-import {StarService} from './starService';
+import {StarService} from './star.service';
 
 @Component({
     selector: 'star',
@@ -25,15 +25,15 @@ export class Star {
         this.service = starService;
     }
 
-    isStared(id) {
+    isStared(id: string) {
         return this.service.isStared(id);
     }
 
-    star(id) {
+    star(id: string) {
         this.service.star(id);
     }
 
-    unstar(id) {
+    unstar(id: string) {
         this.service.unstar(id);
     }
 

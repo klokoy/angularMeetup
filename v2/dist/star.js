@@ -1,4 +1,4 @@
-System.register(['angular2/angular2', './starService'], function(exports_1) {
+System.register(['angular2/angular2', './star.service'], function(exports_1) {
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") return Reflect.decorate(decorators, target, key, desc);
         switch (arguments.length) {
@@ -10,15 +10,15 @@ System.register(['angular2/angular2', './starService'], function(exports_1) {
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var angular2_1, starService_1;
+    var angular2_1, star_service_1;
     var Star;
     return {
         setters:[
             function (angular2_1_1) {
                 angular2_1 = angular2_1_1;
             },
-            function (starService_1_1) {
-                starService_1 = starService_1_1;
+            function (star_service_1_1) {
+                star_service_1 = star_service_1_1;
             }],
         execute: function() {
             Star = (function () {
@@ -37,14 +37,14 @@ System.register(['angular2/angular2', './starService'], function(exports_1) {
                 Star = __decorate([
                     angular2_1.Component({
                         selector: 'star',
-                        bindings: [starService_1.StarService],
+                        bindings: [star_service_1.StarService],
                         inputs: ['person']
                     }),
                     angular2_1.View({
                         template: "\n        <span>\n            <i class=\"material-icons\" (click)=\"star(person.id);$event.stopPropagation();\" *ng-if=\"!isStared(person.id)\">star_border</i>\n            <i class=\"material-icons\" (click)=\"unstar(person.id);$event.stopPropagation();\" *ng-if=\"isStared(person.id)\">star</i>\n        </span>\n    ",
                         directives: [angular2_1.CORE_DIRECTIVES, angular2_1.FORM_DIRECTIVES]
                     }), 
-                    __metadata('design:paramtypes', [starService_1.StarService])
+                    __metadata('design:paramtypes', [star_service_1.StarService])
                 ], Star);
                 return Star;
             })();

@@ -1,20 +1,20 @@
 import { Injectable } from 'angular2/angular2';
 
-@Injectable()
+var stars: string[] = [];
 
-var stars: [string] = [];
+@Injectable()
 
 export class StarService{
 
-    isStared(id) {
+    isStared(id: string) {
         return stars.indexOf(id) >= 0;
     }
 
-    star(id) {
+    star(id: string) {
         stars.push(id);
     }
 
-    unstar(id, e) {
+    unstar(id: string) {
         stars.splice(stars.indexOf(id), 1)
     }
 

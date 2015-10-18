@@ -11,38 +11,33 @@ System.register(['angular2/angular2'], function(exports_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var angular2_1;
-    var PersonService;
+    var stars, StarService;
     return {
         setters:[
             function (angular2_1_1) {
                 angular2_1 = angular2_1_1;
             }],
         execute: function() {
-            PersonService = (function () {
-                function PersonService() {
-                    this.url = 'http://localhost:3000';
+            stars = [];
+            StarService = (function () {
+                function StarService() {
                 }
-                PersonService.prototype.all = function () {
-                    return window
-                        .fetch(this.url + '/persons')
-                        .then(function (res) {
-                        return res.json();
-                    });
+                StarService.prototype.isStared = function (id) {
+                    return stars.indexOf(id) >= 0;
                 };
-                PersonService.prototype.get = function (id) {
-                    return window
-                        .fetch(this.url + '/persons/' + id)
-                        .then(function (res) {
-                        return res.json();
-                    });
+                StarService.prototype.star = function (id) {
+                    stars.push(id);
                 };
-                PersonService = __decorate([
+                StarService.prototype.unstar = function (id) {
+                    stars.splice(stars.indexOf(id), 1);
+                };
+                StarService = __decorate([
                     angular2_1.Injectable(), 
                     __metadata('design:paramtypes', [])
-                ], PersonService);
-                return PersonService;
+                ], StarService);
+                return StarService;
             })();
-            exports_1("PersonService", PersonService);
+            exports_1("StarService", StarService);
         }
     }
 });

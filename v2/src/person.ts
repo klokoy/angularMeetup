@@ -1,7 +1,7 @@
 import {Component, View, FORM_DIRECTIVES, CORE_DIRECTIVES} from 'angular2/angular2';
 import {RouteParams, OnActivate, ComponentInstruction} from 'angular2/router';
 
-import {PersonService} from './personService';
+import {PersonService} from './person.service';
 
 @Component({
     selector: 'person',
