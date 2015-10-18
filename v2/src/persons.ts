@@ -2,11 +2,11 @@ import {Component, View, NgFor} from 'angular2/angular2';
 import {RouterLink} from 'angular2/router';
 
 import {Person} from './person';
-
-
+import {PersonService} from './personService';
 
 @Component({
-    selector: 'persons'
+    selector: 'persons',
+    bindings: [PersonService]
 })
 @View({
     template: `
@@ -47,20 +47,20 @@ import {Person} from './person';
 
 export class Persons {
 
+    service: PersonService;
 
-    constructor() {
+    constructor(personService: PersonService) {
         var self = this;
         self.list = [1, 2, 3, 4]
 
-        window.fetch('http://localhost:3000/persons')
-            .then(function(response) {
+        self.service = personService;
 
-            response.json()
-                .then(function(all) {
-                self.list = all;
-
-            })
+        self.service
+            .all()
+            .then(function(all) {
+            self.list = all;
         })
+
     }
 
 }

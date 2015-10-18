@@ -17,6 +17,7 @@ RouterLink} from 'angular2/router';
 
 import {Persons} from './persons';
 import {Person} from './person';
+import {PersonService} from './personService';
 
 @Component({
     selector: 'app'
