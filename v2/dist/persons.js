@@ -1,4 +1,4 @@
-System.register(['angular2/angular2', 'angular2/router', './person', './personService'], function(exports_1) {
+System.register(['angular2/angular2', 'angular2/router', './person', './personService', './star'], function(exports_1) {
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") return Reflect.decorate(decorators, target, key, desc);
         switch (arguments.length) {
@@ -10,7 +10,7 @@ System.register(['angular2/angular2', 'angular2/router', './person', './personSe
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var angular2_1, router_1, person_1, personService_1;
+    var angular2_1, router_1, person_1, personService_1, star_1;
     var Persons;
     return {
         setters:[
@@ -25,6 +25,9 @@ System.register(['angular2/angular2', 'angular2/router', './person', './personSe
             },
             function (personService_1_1) {
                 personService_1 = personService_1_1;
+            },
+            function (star_1_1) {
+                star_1 = star_1_1;
             }],
         execute: function() {
             Persons = (function () {
@@ -44,8 +47,8 @@ System.register(['angular2/angular2', 'angular2/router', './person', './personSe
                         bindings: [personService_1.PersonService]
                     }),
                     angular2_1.View({
-                        template: "\n        <h2>\n            The data:\n        </h2>\n\n        <table class=\"striped\">\n            <thead>\n                <tr>\n                    <th data-field=\"avatar\"></th>\n                    <th data-field=\"star\"></th>\n                    <th data-field=\"firstName\">First name</th>\n                    <th data-field=\"lastName\">Last name</th>\n                    <th data-field=\"jobTitle\">Job title</th>\n                </tr>\n            </thead>\n\n            <tbody>\n                <tr *ng-for=\"#person of list\" [router-link] = \"['../Person', {id: person.id}]\">\n                    <td><img alt=\"\" class=\"circle\" height=\"36\" src=\"{{person.avatar}}\" width=\"36\"></td>\n                    <td>\n                        <!--span ng-controller=\"StarCtrl as star\">\n                            <i class=\"material-icons\" ng-click=\"star.star(person.id);$event.stopPropagation();\" ng-if=\"!star.isStared(person.id)\">star_border</i>\n                            <i class=\"material-icons\" ng-click=\"star.unstar(person.id);$event.stopPropagation();\" ng-if=\"star.isStared(person.id)\">star</i>\n                        </span-->\n                    </td>\n                    <td>{{person.firstName}}</td>\n                    <td>{{person.lastName}}</td>\n                    <td>{{person.jobTitle}}</td>\n                </tr>\n            </tbody>\n        </table>\n\n    ",
-                        directives: [angular2_1.NgFor, person_1.Person, router_1.RouterLink]
+                        template: "\n        <h2>\n            The data:\n        </h2>\n\n        <table class=\"striped\">\n            <thead>\n                <tr>\n                    <th data-field=\"avatar\"></th>\n                    <th data-field=\"star\"></th>\n                    <th data-field=\"firstName\">First name</th>\n                    <th data-field=\"lastName\">Last name</th>\n                    <th data-field=\"jobTitle\">Job title</th>\n                </tr>\n            </thead>\n\n            <tbody>\n                <tr *ng-for=\"#person of list\" [router-link] = \"['../Person', {id: person.id}]\">\n                    <td><img alt=\"\" class=\"circle\" height=\"36\" src=\"{{person.avatar}}\" width=\"36\"></td>\n                    <td>\n                        <star [person]=\"person\"></star>\n                    </td>\n                    <td>{{person.firstName}}</td>\n                    <td>{{person.lastName}}</td>\n                    <td>{{person.jobTitle}}</td>\n                </tr>\n            </tbody>\n        </table>\n\n    ",
+                        directives: [angular2_1.NgFor, person_1.Person, router_1.RouterLink, star_1.Star]
                     }), 
                     __metadata('design:paramtypes', [personService_1.PersonService])
                 ], Persons);

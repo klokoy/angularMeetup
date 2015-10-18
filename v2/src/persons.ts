@@ -3,6 +3,7 @@ import {RouterLink} from 'angular2/router';
 
 import {Person} from './person';
 import {PersonService} from './personService';
+import {Star} from './star';
 
 @Component({
     selector: 'persons',
@@ -29,10 +30,7 @@ import {PersonService} from './personService';
                 <tr *ng-for="#person of list" [router-link] = "['../Person', {id: person.id}]">
                     <td><img alt="" class="circle" height="36" src="{{person.avatar}}" width="36"></td>
                     <td>
-                        <!--span ng-controller="StarCtrl as star">
-                            <i class="material-icons" ng-click="star.star(person.id);$event.stopPropagation();" ng-if="!star.isStared(person.id)">star_border</i>
-                            <i class="material-icons" ng-click="star.unstar(person.id);$event.stopPropagation();" ng-if="star.isStared(person.id)">star</i>
-                        </span-->
+                        <star [person]="person"></star>
                     </td>
                     <td>{{person.firstName}}</td>
                     <td>{{person.lastName}}</td>
@@ -42,7 +40,7 @@ import {PersonService} from './personService';
         </table>
 
     `,
-    directives: [NgFor, Person, RouterLink]
+    directives: [NgFor, Person, RouterLink, Star]
 })
 
 export class Persons {
