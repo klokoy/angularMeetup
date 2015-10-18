@@ -1,0 +1,4 @@
+<span>
+    <i class="material-icons" ng-click="star.star(person.id);$event.stopPropagation();" ng-if="!star.isStared(person.id)">star_border</i>
+    <i class="material-icons" ng-click="star.unstar(person.id);$event.stopPropagation();" ng-if="star.isStared(person.id)">star</i>
+</span>

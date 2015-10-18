@@ -17,12 +17,9 @@
 
         <tbody>
             <tr ng-repeat="person in persons.list" ui-sref="item({id: person.id})">
-                <td><img alt="" class="circle" height="36" src="{{person.avatar}}" width="36"></td>
+                <td><img alt="" class="circle" height="36" ng-src="{{person.avatar}}" width="36"></td>
                 <td>
-                    <span ng-controller="StarCtrl as star">
-                        <i class="material-icons" ng-click="star.star(person.id);$event.stopPropagation();" ng-if="!star.isStared(person.id)">star_border</i>
-                        <i class="material-icons" ng-click="star.unstar(person.id);$event.stopPropagation();" ng-if="star.isStared(person.id)">star</i>
-                    </span>
+                    <star person="person"></star>
                 </td>
                 <td>{{person.firstName}}</td>
                 <td>{{person.lastName}}</td>
