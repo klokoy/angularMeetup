@@ -1,4 +1,4 @@
-System.register(['angular2/angular2', 'angular2/router', './persons'], function(exports_1) {
+System.register(['angular2/angular2', 'angular2/router', './persons', './person'], function(exports_1) {
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") return Reflect.decorate(decorators, target, key, desc);
         switch (arguments.length) {
@@ -10,7 +10,7 @@ System.register(['angular2/angular2', 'angular2/router', './persons'], function(
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var angular2_1, router_1, persons_1;
+    var angular2_1, router_1, persons_1, person_1;
     var App, ROUTER_BINDINGS, APP_BINDINGS;
     return {
         setters:[
@@ -22,6 +22,9 @@ System.register(['angular2/angular2', 'angular2/router', './persons'], function(
             },
             function (persons_1_1) {
                 persons_1 = persons_1_1;
+            },
+            function (person_1_1) {
+                person_1 = person_1_1;
             }],
         execute: function() {
             App = (function () {
@@ -32,11 +35,13 @@ System.register(['angular2/angular2', 'angular2/router', './persons'], function(
                         selector: 'app'
                     }),
                     angular2_1.View({
-                        template: "\n        <h1>yea</h1>\n        <router-outlet></router-outlet>\n    ",
-                        directives: [router_1.ROUTER_DIRECTIVES]
+                        template: "\n        <div class=\"container\">\n            <div class=\"row\">\n\n                <h1 class=\"center-align\" [router-link]=\" ['./List'] \">\n                    1 to 2\n                </h1>\n\n                <router-outlet></router-outlet>\n            </div>\n        </div>\n    ",
+                        directives: [router_1.ROUTER_DIRECTIVES, router_1.RouterLink]
                     }),
                     router_1.RouteConfig([
-                        { path: '/', as: 'Persons', component: persons_1.Persons }
+                        { path: '/', as: 'Persons', component: persons_1.Persons },
+                        { path: '/list', as: 'List', component: persons_1.Persons },
+                        { path: '/item/:id', as: 'Person', component: person_1.Person }
                     ]), 
                     __metadata('design:paramtypes', [])
                 ], App);
