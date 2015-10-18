@@ -1,8 +1,8 @@
 angular
     .module('app')
-    .service('Person', Person);
+    .service('PersonService', PersonService);
 
-function Person($http) {
+function PersonService($http) {
 
     this.all = function() {
         return $http.get('http://localhost:3000/persons')
