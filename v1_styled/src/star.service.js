@@ -1,8 +1,8 @@
 angular
     .module('app')
-    .service('Star', Star);
+    .service('StarService', StarService);
 
-function Star() {
+function StarService() {
 
     var stars = [];
 
