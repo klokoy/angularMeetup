@@ -12,8 +12,8 @@ app.config(function($stateProvider, $urlRouterProvider) {
       controller: "PersonsCtrl"
     })
     .state('item', {
-      url: "/:id",
+      url: "/item/:id",
       templateUrl: "views/person.html",
       controller: 'PersonCtrl'
-    })
+    });
 });

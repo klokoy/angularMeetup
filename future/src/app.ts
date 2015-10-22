@@ -39,7 +39,7 @@ import {PersonService} from './personService';
 })
 
 @RouteConfig([
-    { path: '/', as: 'Persons', component: Persons },
+    { path: '/', redirectTo: '/list'},
     { path: '/list', as: 'List', component: Persons },
     { path: '/item/:id', as: 'Person', component: Person }
 ])

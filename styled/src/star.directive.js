@@ -1,7 +1,6 @@
 angular
     .module('app')
-    .directive('star', starDirective)
-    .controller('StarCtrl', StarCtrl);
+    .directive('star', starDirective);
 
 function starDirective() {
     return {

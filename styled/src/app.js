@@ -10,7 +10,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
             template: "<persons></persons>"
         })
         .state('item', {
-            url: "/:id",
+            url: "/item/:id",
             template: "<person></person>"
         })
 });
