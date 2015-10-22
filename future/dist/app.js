@@ -39,7 +39,7 @@ System.register(['angular2/angular2', 'angular2/router', './persons', './person'
                         directives: [router_1.ROUTER_DIRECTIVES, router_1.RouterLink]
                     }),
                     router_1.RouteConfig([
-                        { path: '/', as: 'Persons', component: persons_1.Persons },
+                        { path: '/', redirectTo: '/list' },
                         { path: '/list', as: 'List', component: persons_1.Persons },
                         { path: '/item/:id', as: 'Person', component: person_1.Person }
                     ]), 

@@ -1,4 +1,4 @@
-import {Component, View, FORM_DIRECTIVES, CORE_DIRECTIVES} from 'angular2/angular2';
+import {Component, View, NgFor, NgIf} from 'angular2/angular2';
 
 import {StarService} from './star.service';
 
@@ -14,7 +14,7 @@ import {StarService} from './star.service';
             <i class="material-icons" (click)="unstar(person.id);$event.stopPropagation();" *ng-if="isStared(person.id)">star</i>
         </span>
     `,
-    directives: [CORE_DIRECTIVES, FORM_DIRECTIVES]
+    directives: [NgFor, NgIf]
 })
 
 export class Star {
@@ -25,9 +25,7 @@ export class Star {
         this.service = starService;
     }
 
-    isStared(id: string) {
-        return this.service.isStared(id);
-    }
+    isStared(id: string) { return this.service.isStared(id) }
 
     star(id: string) {
         this.service.star(id);
@@ -36,5 +34,4 @@ export class Star {
     unstar(id: string) {
         this.service.unstar(id);
     }
-
 }

@@ -25,9 +25,7 @@ System.register(['angular2/angular2', './star.service'], function(exports_1) {
                 function Star(starService) {
                     this.service = starService;
                 }
-                Star.prototype.isStared = function (id) {
-                    return this.service.isStared(id);
-                };
+                Star.prototype.isStared = function (id) { return this.service.isStared(id); };
                 Star.prototype.star = function (id) {
                     this.service.star(id);
                 };
@@ -42,7 +40,7 @@ System.register(['angular2/angular2', './star.service'], function(exports_1) {
                     }),
                     angular2_1.View({
                         template: "\n        <span>\n            <i class=\"material-icons\" (click)=\"star(person.id);$event.stopPropagation();\" *ng-if=\"!isStared(person.id)\">star_border</i>\n            <i class=\"material-icons\" (click)=\"unstar(person.id);$event.stopPropagation();\" *ng-if=\"isStared(person.id)\">star</i>\n        </span>\n    ",
-                        directives: [angular2_1.CORE_DIRECTIVES, angular2_1.FORM_DIRECTIVES]
+                        directives: [angular2_1.NgFor, angular2_1.NgIf]
                     }), 
                     __metadata('design:paramtypes', [star_service_1.StarService])
                 ], Star);

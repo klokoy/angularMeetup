@@ -3,44 +3,37 @@
 #REST api
 Simple `json-server` rest api. To start:
 ```bash
+npm install
 json-server db.js
 ```
 
 
-#v1
+#vintage
 Naive angular 1 version, old style.
 
 ```bash
-#in v1 directory
+#in vintage directory
+npm install
 http-server
+#navigate to http://localhost:8080
 ```
 
-#v1_styled
-angular 1 version. transformed to follow angular style guide + directives and thin controllers
-
-changes to comply with angular style guide
-- controller_as syntax
-
-
+#styled
+angular 1 version. refactored to a more component based style.
 
 ```bash
-#in v1_styled directory
-http-server
+#in styled directory
+npm install
+npm start
+#navigate to http://localhost:8081
 ```
 
-#v1&2
-angular 1 version. transformed to follow angular style guide + directives and thin controllers
-
-```bash
-#in v1&2 directory
-http-server
-```
-
-
-#v2
+#future
 angular 2 version
 
 ```bash
-#in v2 directory
-http-server
+#in future directory
+npm install
+gulp play
+#will open browser on http://localhost:8082
 ```

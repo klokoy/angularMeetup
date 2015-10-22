@@ -1,0 +1,35 @@
+<div *ng-if="person" class="row">
+
+    <div class="center-align">
+        <img alt="" class="circle center-align" height="200" [src]="person.avatar" width="200">
+    </div>
+
+    <form (submit)="onSubmit()" class="col s12">
+
+        <div class="row">
+            <div class="input-field col s6">
+                <label class="active" for="first_name">First Name</label>
+                <input [(ng-model)]="person.firstName" id="first_name" placeholder="Placeholder" type="text">
+            </div>
+            <div class="input-field col s6">
+                <label class="active" for="last_name">Last Name</label>
+                <input [(ng-model)]="person.lastName" id="last_name" type="text">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s12">
+                <label class="active" for="jobTitle">Job title</label>
+                <input [(ng-model)]="person.jobTitle" id="jobTitle" type="text">
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <label class="active" for="jobDescription">Job description</label>
+                <input [(ng-model)]="person.jobDescription" id="jobDescription" type="text">
+            </div>
+        </div>
+
+        <button class="btn btn-default" type="submit">Submit</button>
+    </form>
+</div>
