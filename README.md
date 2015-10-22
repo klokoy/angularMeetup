@@ -1,5 +1,7 @@
 #Angular 1 to 2
 
+accompanying slides at http://slides.com/kimlokoy/from-1-to-2
+
 #REST api
 Simple `json-server` rest api. To start:
 ```bash
